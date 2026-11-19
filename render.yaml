@@ -1,0 +1,13 @@
+# Render Blueprint: one-click deploy of the Discover demo.
+# Dashboard -> New -> Blueprint -> pick this repo.
+services:
+  - type: web
+    name: coy-discover
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/feed
+    envVars:
+      - key: NODE_VERSION
+        value: 22
