@@ -1,0 +1,12 @@
+node_modules
+.next
+out
+next-env.d.ts
+*.tsbuildinfo
+
+# local SQLite database (recreated + seeded automatically)
+data/*.db
+data/*.db-*
+
+.env*.local
+.DS_Store
